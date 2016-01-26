@@ -1,0 +1,23 @@
+{
+  "name": "node-cal",
+  "version": "1.0.0",
+  "description": "",
+  "main": "cal.js",
+  "scripts": {
+    "test": "mocha --harmony_destructuring tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/schmitz1193/node-cal.git"
+  },
+  "author": "Stephanie Krause <npm@sscotth.io>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/schmitz1193/node-cal/issues"
+  },
+  "homepage": "https://github.com/schmitz1193/node-cal#readme",
+  "devDependencies": {
+    "chai": "^3.4.1",
+    "mocha": "^2.3.4"
+  }
+}
