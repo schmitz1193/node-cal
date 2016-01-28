@@ -5,7 +5,7 @@ const { execSync } = require('child_process');
 
 describe('cal', () => {
   describe('CLI', () => {
-    it('should handle the current month', () => {
+    xit('should handle the current month', () => {
       const goal = execSync('cal').toString();
       const output = execSync('./cal.js').toString();
 
@@ -60,7 +60,7 @@ describe('cal', () => {
   describe('the month output', () => {
     const month = require('../lib/month.js');
       it('should handle January', () => {
-        expect(month.setUpMonth(2016, 1)).to.equal('    January 2016');
+        expect(month.setUpMonth(2016, 1)).to.equal('    January 2016\n');
       });
   });
   describe('the weekday output', () => {
