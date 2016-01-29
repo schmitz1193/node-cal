@@ -2,17 +2,28 @@
 
 'use strict';
 
+const Month = require('./lib/month.js');
+
 //ignore the first two arguments? first two arguments are the month and the year
-//const [,, ...args] = process.argv;
 
-console.log('args');
+const [,, ...argv] = process.argv;
 
-//if (args.length === 2) {
-//  const [month, year] = args;
-//  console.log(`generateMonth(${year},${month})`;
-//} else if(args.length === 1) {
-//  const [year] = args;
-//  console.log(`generateYear(${year})`)
-//} else {
-//  console.log('broke it');
-//}
+console.log('argv ', argv);
+//get the month and year of today
+//args.length === 0 ? console.log(setUpWholeMonth(
+//
+
+if (argv.length === 0) {
+  const month = new Date().getMonth() + 1;
+  const year = new Date().getFullYear();
+  console.log(Month.setUpWholeMonth(year,month));
+  } else if (argv.length === 2) {
+    const [year, month] = argv;
+    console.log(Month);
+    console.log(Month.setUpWholeMonth(year,month));
+     } else if(argv.length === 1) {
+    const [year] = argv;
+    console.log('generateYear(${year})')
+  } else {
+    console.log('broke it');
+  }

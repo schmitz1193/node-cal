@@ -5,11 +5,13 @@ const { execSync } = require('child_process');
 
 describe('cal', () => {
   describe('CLI', () => {
-    xit('should handle the current month', () => {
+    it('should handle the current month', () => {
       const goal = execSync('cal').toString();
       const output = execSync('./cal.js').toString();
-
       expect(output).to.equal(goal);
+    });
+    it('CLI should show Feb 2015 as having 4 weeks starts on Su', () => {
+      expect(execSync('./cal.js 2 2015').toString()).to.equal(execSync('cal 2 2015').toString());
     });
   });
 
@@ -75,6 +77,5 @@ describe('cal', () => {
         expect(month.setUpDates(2016, 1, 1)).to.equal(`                1  2\n 3  4  5  6  7  8  9\n10 11 12 13 14 15 16\n17 18 19 20 21 22 23\n24 25 26 27 28 29 30\n31\n`);
       });
   });
-
 
 });
