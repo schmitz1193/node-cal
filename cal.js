@@ -8,7 +8,7 @@ const Month = require('./lib/month.js');
 
 const [,, ...argv] = process.argv;
 
-console.log('argv ', argv);
+//console.log('argv ', argv);
 //get the month and year of today
 //args.length === 0 ? console.log(setUpWholeMonth(
 //
@@ -19,7 +19,7 @@ if (argv.length === 0) {
   console.log(Month.setUpWholeMonth(year,month));
   } else if (argv.length === 2) {
     const [year, month] = argv;
-    console.log(Month);
+//    console.log(Month);
     console.log(Month.setUpWholeMonth(year,month));
      } else if(argv.length === 1) {
     const [year] = argv;

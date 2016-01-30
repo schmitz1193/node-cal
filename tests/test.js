@@ -10,8 +10,8 @@ describe('cal', () => {
       const output = execSync('./cal.js').toString();
       expect(output).to.equal(goal);
     });
-    it('CLI should show Feb 2015 as having 4 weeks starts on Su', () => {
-      expect(execSync('./cal.js 2 2015').toString()).to.equal(execSync('cal 2 2015').toString());
+   it('CLI should show Feb 2015 as having 4 weeks starts on Su', () => {
+      expect(execSync('./cal.js 2015 2').toString()).to.equal(execSync('cal 2 2015').toString());
     });
   });
 
@@ -74,7 +74,7 @@ describe('cal', () => {
   describe('the dates with 31 days', () => {
     const month = require('../lib/month.js');
      it('should print all the dates in January',() => {
-        expect(month.setUpDates(2016, 1, 1)).to.equal(`                1  2\n 3  4  5  6  7  8  9\n10 11 12 13 14 15 16\n17 18 19 20 21 22 23\n24 25 26 27 28 29 30\n31\n`);
+        expect(month.setUpDates(2016, 1, 1)).to.equal(`                1  2\n 3  4  5  6  7  8  9\n10 11 12 13 14 15 16\n17 18 19 20 21 22 23\n24 25 26 27 28 29 30\n31`);
       });
   });
 
