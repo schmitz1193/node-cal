@@ -18,7 +18,7 @@ if (argv.length === 0) {
   const year = new Date().getFullYear();
   console.log(Month.setUpWholeMonth(year,month));
   } else if (argv.length === 2) {
-    const [year, month] = argv;
+    const [month, year] = argv;
 //    console.log(Month);
     console.log(Month.setUpWholeMonth(year,month));
      } else if(argv.length === 1) {

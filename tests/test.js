@@ -11,8 +11,26 @@ describe('cal', () => {
       expect(output).to.equal(goal);
     });
    it('CLI should show Feb 2015 as having 4 weeks starts on Su', () => {
-      expect(execSync('./cal.js 2015 2').toString()).to.equal(execSync('cal 2 2015').toString());
-    });
+      expect(execSync('./cal.js 2 2015').toString()).to.equal(execSync('cal 2 2015').toString());
+   });
+   it('CLI should show Oct 2015 as having 5 weeks starts on Th', () => {
+      expect(execSync('./cal.js 10 2015').toString()).to.equal(execSync('cal 10 2015').toString());
+   });
+   it('CLI should show Aug 2015 as having 6 weeks starts on Sa', () => {
+      expect(execSync('./cal.js 8 2015').toString()).to.equal(execSync('cal 8 2015').toString());
+   });
+   it('CLI should show Nov 2015 as having 30 days starts on Su', () => {
+      expect(execSync('./cal.js 11 2015').toString()).to.equal(execSync('cal 11 2015').toString());
+   });
+   it('CLI should show Dec 2015 as having 31 days starts on Tu', () => {
+      expect(execSync('./cal.js 12 2015').toString()).to.equal(execSync('cal 12 2015').toString());
+   });
+   it('CLI should show Feb 2014 as having 28 days starts on Sa', () => {
+      expect(execSync('./cal.js 2 2014').toString()).to.equal(execSync('cal 2 2014').toString());
+   });
+    it('CLI should show Feb 2012 as having 29 days starts on We', () => {
+      expect(execSync('./cal.js 2 2012').toString()).to.equal(execSync('cal 2 2012').toString());
+   });
   });
 
   describe("Zeller's congruence", () => {
@@ -59,6 +77,8 @@ describe('cal', () => {
       });
     });
   });
+
+
   describe('the month output', () => {
     const month = require('../lib/month.js');
       it('should handle January', () => {
