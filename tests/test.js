@@ -5,11 +5,11 @@ const { execSync } = require('child_process');
 
 describe('cal', () => {
   describe('CLI', () => {
-    it('should handle the current month', () => {
+   it('should handle the current month', () => {
       const goal = execSync('cal').toString();
       const output = execSync('./cal.js').toString();
       expect(output).to.equal(goal);
-    });
+   });
    it('CLI should show Feb 2015 as having 4 weeks starts on Su', () => {
       expect(execSync('./cal.js 2 2015').toString()).to.equal(execSync('cal 2 2015').toString());
    });
@@ -31,6 +31,10 @@ describe('cal', () => {
     it('CLI should show Feb 2012 as having 29 days starts on We', () => {
       expect(execSync('./cal.js 2 2012').toString()).to.equal(execSync('cal 2 2012').toString());
    });
+   it('CLI should show 2016', () => {
+      expect(execSync('./cal.js 2016').toString()).to.equal(execSync('cal 2016').toString());
+   });
+
   });
 
   describe("Zeller's congruence", () => {
@@ -82,7 +86,7 @@ describe('cal', () => {
   describe('the month output', () => {
     const month = require('../lib/month.js');
       it('should handle January', () => {
-        expect(month.setUpMonth(2016, 1)).to.equal('    January 2016\n');
+        expect(month.setUpMonth(2016, 1)).to.equal(`    January 2016`);
       });
   });
   describe('the weekday output', () => {
