@@ -12,6 +12,17 @@
     "type": "git",
     "url": "git+https://github.com/schmitz1193/node-cal.git"
   },
+  "eslintConfig": {
+    "env": {
+      "mocha": true,
+      "node": true,
+      "es6": true
+    },
+    "extends": "eslint:recommended",
+    "rules": {
+      "no-console": 0
+    }
+  },
   "author": "Stephanie Krause <npm@sscotth.io>",
   "license": "MIT",
   "bugs": {
