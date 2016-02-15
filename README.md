@@ -1,5 +1,7 @@
-#Nashville Softward School Cohort 11 Back-end Curriculum
+#Node Cal
 
-- Using testing to write a node calendar that uses Zeller's Congruence to mimics the Google Calendar Command Line.
+##Nashville Softward School Cohort 11 
 
-- Also incorporates the use of Babel and Coveralls.
+- Using testing to write a node calendar that uses Zeller's Congruence to mimic the Google Calendar Command Line.
+
+- Incorporates the use of Babel and Coveralls.
